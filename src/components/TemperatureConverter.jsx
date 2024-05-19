@@ -24,7 +24,7 @@ const TemperatureConverter = () => {
     <div className="temp-converter">
       <label className="temp-converter-column" htmlFor="celsius">
         <input
-          className="temp-converter-row"
+          className="temp-converter-column-top-row"
           type="number"
           id="celsius"
           value={celsius}
@@ -43,7 +43,7 @@ const TemperatureConverter = () => {
 
       <label className="temp-converter-column" htmlFor="fahrenheit">
         <input
-          className="temp-converter-row"
+          className="temp-converter-column-top-row"
           type="number"
           id="fahrenheit"
           value={fahrenheit}
