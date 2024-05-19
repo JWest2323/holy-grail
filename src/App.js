@@ -1,15 +1,14 @@
 import "./App.css";
+import ProgressBar from "./components/ProgressBar";
+import TemperatureConverter from "./components/TemperatureConverter";
 
 function App() {
   return (
     <>
-      <header>Header</header>
-      <div className="contents">
-        <nav>Navigation</nav>
-        <main>Main</main>
-        <aside>Sidebar</aside>
-      </div>
-      <footer>Footer</footer>
+      <ProgressBar completionValue={10} />
+      <ProgressBar completionValue={30} />
+      <ProgressBar completionValue={50} />
+      <TemperatureConverter />
     </>
   );
 }
