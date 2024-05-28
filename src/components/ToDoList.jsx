@@ -43,6 +43,7 @@ const ToDoList = () => {
       <h1>Todo List</h1>
       <div className="todo-list_input-container">
         <input
+          aria-label="Add new task"
           value={newTask}
           onKeyDown={handleKeyDown}
           onChange={event => handleChange(event.target.value)}
