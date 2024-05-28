@@ -2,6 +2,7 @@ import "./App.css";
 import ProgressBar from "./components/ProgressBar";
 import TemperatureConverter from "./components/TemperatureConverter";
 import TweetCard from "./components/TweetCard";
+import ToDoList from "./components/ToDoList";
 
 function App() {
   return (
@@ -43,7 +44,12 @@ function App() {
         likeCount="40.5 K"
       />
       </div>
+
+
+      <ToDoList />
     </>
+
+    
   );
 }
 
