@@ -1,0 +1,27 @@
+form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+}
+
+label {
+  font-size: 12px;
+}
+
+input, textarea {
+  display: block;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.inputElement {
+  display: flex;
+  flex-direction: column; 
+  max-width: 25vw;
+}

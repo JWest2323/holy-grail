@@ -3,6 +3,7 @@ import ProgressBar from "./components/ProgressBar";
 import TemperatureConverter from "./components/TemperatureConverter";
 import TweetCard from "./components/TweetCard";
 import ToDoList from "./components/ToDoList";
+import ContactForm from "./components/contactForm/ContactForm";
 
 function App() {
   return (
@@ -45,8 +46,9 @@ function App() {
       />
       </div>
 
-
       <ToDoList />
+
+      <ContactForm />
     </>
 
     
