@@ -1,13 +1,12 @@
-import submitForm from "./submitForm";
-import "./ContactForm.css";
+import "../css/ContactForm.css";
 
 const ContactForm = () => {
   return (
     <div className="form-container">
       <h1>Contact Form</h1>
       <form
-        action="https://www.greatfrontend.com/api/questions/contact-form"
-        onSubmit={submitForm}
+        className="contact-form"
+        action="http://localhost:3000/submit-form"
         method="post"
       >
         <div className="inputElement">
