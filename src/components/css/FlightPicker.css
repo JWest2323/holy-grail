@@ -1,0 +1,9 @@
+.flight-picker {
+  margin-top: 50vh;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
