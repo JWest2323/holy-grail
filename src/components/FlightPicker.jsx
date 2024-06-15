@@ -36,12 +36,12 @@ const FlightPicker = () => {
     <form
       action=""
       className="flight-picker"
-      value={flightType}
       onSubmit={(event) => handleSubmit(event)}
     >
       <select
         name="flight-type"
         id="flight-type"
+        value={flightType}
         onChange={(event) => setFlightType(event.target.value)}
       >
         <option value="one-way">One-way flight</option>
