@@ -5,6 +5,7 @@ import TweetCard from "./components/TweetCard";
 import ToDoList from "./components/ToDoList";
 import ContactForm from "./components/forms/contactForm/ContactForm";
 import FlightPicker from "./components/forms/FlightPicker";
+import MortgageCalculator from "./components/forms/mortgageCalculator/MortgageCalculator";
 
 function App() {
   return (
@@ -53,6 +54,8 @@ function App() {
 
 
       <FlightPicker />
+
+      <MortgageCalculator />
     </>
 
     
