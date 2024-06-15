@@ -2,59 +2,63 @@ import React from "react";
 import "./css/TemperatureConverter.css";
 import { useState } from "react";
 
-const format = number => {
-  // show up to only 4 decimal places
-  return /\.\d{5}/.test(number) ? Number(number).toFixed(4) : number;
-};
-
 const TemperatureConverter = () => {
-  const [celsius, setCelsius] = useState("");
-  const [fahrenheit, setFahrenheit] = useState("");
+  const [celsiusTemp, setCelsiusTemp] = useState("");
+  const [fahrenheitTemp, setFahrenheitTemp] = useState("");
 
-  const convert = (value, setTarget, calcValue) => {
-    // convert string value to number & validate input
-    const numericalVal = Number(value);
-    const isValid = !Number.isNaN(numericalVal) && Boolean(value);
+  const convertTemperature = (temperature, toCelsius) => {
+    let result;
+    if (toCelsius) {
+      result = parseFloat(((temperature - 32) / (5 / 9)).toFixed(4));
+    } else {
+      result = parseFloat((temperature * (9 / 5) + 32).toFixed(4));
+    }
+    return result;
+  };
 
-    // if value is valid , update state using formatted value : reset to ""
-    setTarget(isValid ? format(calcValue(numericalVal)) : "");
+  const handleCelsiusChange = (event) => {
+    const temperatureInput = event.target.value;
+    if (temperatureInput === "") {
+      setCelsiusTemp("");
+      setFahrenheitTemp("");
+    } else {
+      setCelsiusTemp(temperatureInput);
+      setFahrenheitTemp(convertTemperature(temperatureInput, false));
+    }
+  };
+
+  const handleFahrenheitChange = (event) => {
+    const temperatureInput = event.target.value;
+    if (temperatureInput === "") {
+      setCelsiusTemp("");
+      setFahrenheitTemp("");
+    } else {
+      setFahrenheitTemp(temperatureInput);
+      setCelsiusTemp(convertTemperature(temperatureInput, true));
+    }
   };
 
   return (
-    <div className="temp-converter">
-      <label className="temp-converter-column" htmlFor="celsius">
+    <div className="temp-converter-container">
+      <div className="celsuis-temp-container">
         <input
-          className="temp-converter-column-top-row"
-          type="number"
-          id="celsius"
-          value={celsius}
-          onChange={e => {
-            const newVal = e.target.value;
-            setCelsius(newVal);
-            convert(newVal, setFahrenheit, value => (value * 9) / 5 + 32);
-          }}
+          className="temp-input"
+          value={celsiusTemp}
+          onChange={(event) => handleCelsiusChange(event)}
+          type="text"
         />
-        <div className="temp-converter-column-bottom-row">Celsuis</div>
-      </label>
-
-      <div className="temp-converter-column">
-        <div className="temp-converter-column-top-row">=</div>
+        <p>Celsius</p>
       </div>
-
-      <label className="temp-converter-column" htmlFor="fahrenheit">
+      <span>=</span>
+      <div className="fahrenheit-temp-container">
         <input
-          className="temp-converter-column-top-row"
-          type="number"
-          id="fahrenheit"
-          value={fahrenheit}
-          onChange={e => {
-            const newVal = e.target.value;
-            setFahrenheit(newVal);
-            convert(newVal, setCelsius, value => ((value - 32) * 5) / 9);
-          }}
+          className="temp-input"
+          value={fahrenheitTemp}
+          onChange={(event) => handleFahrenheitChange(event)}
+          type="text"
         />
-        <div className="temp-converter-column-bottom-row">Fahrenheit</div>
-      </label>
+        <p>Fahrenheit</p>
+      </div>
     </div>
   );
 };

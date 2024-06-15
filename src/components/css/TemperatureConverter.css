@@ -1,18 +1,33 @@
-.temp-converter {
+
+.temp-converter-container {
   display: flex;
-  margin: 12px auto;
+  justify-content: center;
+  gap: 8px;
 }
 
-.temp-converter .temp-converter-column-top-row {
+.celsuis-temp-container {
   display: flex;
-  align-items: center;
-  text-align: center;
-  font-size: 18px;
-  height: 24px;
-  padding: 8px;
+  flex-direction: column;
 }
 
-.temp-converter .temp-converter-column-bottom-row {
-  padding: 8px;
+.celsuis-temp-container p {
+  display: flex;
+  justify-content: center;
+  margin: 2px auto;
+}
+
+
+.fahrenheit-temp-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.fahrenheit-temp-container p {
+  display: flex;
+  justify-content: center;
+  margin: 2px auto;
+}
+
+.temp-input {
   text-align: center;
 }
