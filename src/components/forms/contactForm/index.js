@@ -7,7 +7,7 @@ const port = 3000;
 
 // Replace the following with your MongoDB connection string
 const uri =
-  "mongodb+srv://admin:2qLCHCHNy4QAlLjx@cluster0.ymrvb3c.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+  "mongodb+srv://admin:<password>@cluster0.ymrvb3c.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,

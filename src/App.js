@@ -3,8 +3,8 @@ import ProgressBar from "./components/ProgressBar";
 import TemperatureConverter from "./components/TemperatureConverter";
 import TweetCard from "./components/TweetCard";
 import ToDoList from "./components/ToDoList";
-import ContactForm from "./components/contactForm/ContactForm";
-import FlightPicker from "./components/FlightPicker";
+import ContactForm from "./components/forms/contactForm/ContactForm";
+import FlightPicker from "./components/forms/FlightPicker";
 
 function App() {
   return (
