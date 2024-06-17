@@ -1,4 +1,4 @@
-import "./../css/FlightPicker.css";
+import "./../../css/FlightPicker.css";
 import { useState } from "react";
 
 const formatDate = (date) => {

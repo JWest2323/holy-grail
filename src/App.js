@@ -4,7 +4,7 @@ import TemperatureConverter from "./components/TemperatureConverter";
 import TweetCard from "./components/TweetCard";
 import ToDoList from "./components/ToDoList";
 import ContactForm from "./components/forms/contactForm/ContactForm";
-import FlightPicker from "./components/forms/FlightPicker";
+import FlightPicker from "./components/forms/flightPicker/FlightPicker";
 import MortgageCalculator from "./components/forms/mortgageCalculator/MortgageCalculator";
 
 function App() {
