@@ -6,11 +6,12 @@ import ToDoList from "./components/ToDoList";
 import ContactForm from "./components/forms/contactForm/ContactForm";
 import FlightPicker from "./components/forms/flightPicker/FlightPicker";
 import MortgageCalculator from "./components/forms/mortgageCalculator/MortgageCalculator";
+import TransferList from "./components/forms/transferList/TransferList";
 
 function App() {
   return (
     <>
-      <ProgressBar completionValue={10} />
+      {/* <ProgressBar completionValue={10} />
       <ProgressBar completionValue={30} />
       <ProgressBar completionValue={50} />
       <TemperatureConverter />
@@ -55,7 +56,9 @@ function App() {
 
       <FlightPicker />
 
-      <MortgageCalculator />
+      <MortgageCalculator /> */}
+
+      <TransferList />
     </>
 
     
